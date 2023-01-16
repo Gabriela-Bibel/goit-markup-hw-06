@@ -561,8 +561,12 @@ svg {
   background-color: var(--background-dark);
 }
 
+.bottom-nav .container {
+  display: flex;
+}
+
 .logo-address-container {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   padding: 60px 0px;
 }
@@ -638,4 +642,62 @@ svg {
   border-radius: 50%;
   background-color: var(--light-blue);
   outline: none;
+}
+
+.newsletter-form {
+  display: flex;
+  padding-left: 78px;
+  padding-top: 72px;
+  flex-direction: column;
+}
+
+.newsletter-form label {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.142;
+  padding-bottom: 20px;
+}
+
+.newsletter-form .input-box {
+  display: flex;
+  gap: 12px;
+}
+
+.newsletter-form .input-box input {
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--background-dark);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0, 15));
+  padding: 15px 0px 15px 16px;
+}
+
+.input-box input::placeholder {
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form .input-box button {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 26px 10px 42px;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--light-blue);
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+
+.newsletter-form .input-box button svg {
+  fill: var(--text-white);
 }
