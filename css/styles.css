@@ -222,9 +222,14 @@ svg {
   position: relative;
   transform: scaleY(1);
   transition-duration: 250ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  margin: 0px;
 }
 
-.modal-content button {
+.modal-content .close-button {
   background-color: var(--text-white);
   color: var(--logo-black);
   width: 30px;
@@ -250,6 +255,143 @@ svg {
 .is-hidden .modal-content {
   transform: scaleY(0);
   transition-duration: 250ms;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.modal-content p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 12px;
+  color: var(--main-black);
+  margin: 0px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  gap: 4px;
+  position: relative;
+}
+
+.form-field svg {
+  position: absolute;
+  left: 12px;
+  top: 28px;
+  pointer-events: none;
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 40px;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field label {
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: var(--text-grey);
+}
+
+.form-field input:focus {
+  outline: 1px solid var(--light-blue);
+}
+
+.form-field input:focus + svg {
+  fill: var(--light-blue);
+}
+
+.form-field textarea:focus {
+  outline: 1px solid var(--light-blue);
+}
+
+.modal-content .checkbox {
+  padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-grey);
+}
+
+.modal-content .checkbox a {
+  color: var(--light-blue);
+  text-decoration: underline;
+}
+
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input[type='checkbox'] {
+  margin: 0;
+  border: 2px solid var(--main-black);
+  border-radius: 2px;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+}
+
+.checkbox svg {
+  position: absolute;
+  opacity: 0;
+  width: 16px;
+  height: 15px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox input[type='checkbox']:checked + svg {
+  opacity: 1;
+}
+
+.checkbox a {
+  padding: 0px 4px;
+}
+
+.modal-content .submit-button {
+  background: var(--light-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 76px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--text-white);
 }
 
 /* offer description-----------------------------------------*/
